@@ -1,11 +1,9 @@
 package de.idlepolicetycoon.project.view;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.example.dennis.idlepolicetycoon.R;
-
-import de.idlepolicetycoon.project.model.Polizist;
 
 public class MainActivity extends AppCompatActivity {
 
