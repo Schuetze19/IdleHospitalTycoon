@@ -11,9 +11,11 @@ public class Arbeitsplatz {
     private Mitarbeiter mitarbeiter;
     private long kosten;
     private int arbeitsgeschwindigkeit;
+    private int image;
 
-    public Arbeitsplatz(@NonNull Mitarbeiter mitarbeiter){
+    public Arbeitsplatz(@NonNull Mitarbeiter mitarbeiter, @NonNull int image){
         this.mitarbeiter = mitarbeiter;
+        this.image = image;
     }
 
     public Mitarbeiter getMitarbeiter() {

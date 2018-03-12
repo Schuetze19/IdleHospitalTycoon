@@ -1,5 +1,7 @@
 package de.idlepolicetycoon.project.model;
 
+import android.support.annotation.NonNull;
+
 /**
  * Created by Dennis on 12.03.2018.
  */
@@ -11,7 +13,7 @@ public class Mitarbeiter {
     private double x;
     private double y;
 
-    public Mitarbeiter(){}
+    public Mitarbeiter(@NonNull int image){this.image = image;}
 
     public String getName() {
         return name;
@@ -23,10 +25,6 @@ public class Mitarbeiter {
 
     public int getImage() {
         return image;
-    }
-
-    public void setImage(int imageRessource) {
-        this.image = imageRessource;
     }
 
     public double getX() {
