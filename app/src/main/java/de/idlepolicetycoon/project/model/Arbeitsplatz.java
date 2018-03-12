@@ -1,0 +1,38 @@
+package de.idlepolicetycoon.project.model;
+
+import android.support.annotation.NonNull;
+
+/**
+ * Created by Bonziller on 12.03.2018.
+ */
+
+public class Arbeitsplatz {
+
+    private Mitarbeiter mitarbeiter;
+    private long kosten;
+    private int arbeitsgeschwindigkeit;
+
+    public Arbeitsplatz(@NonNull Mitarbeiter mitarbeiter){
+        this.mitarbeiter = mitarbeiter;
+    }
+
+    public Mitarbeiter getMitarbeiter() {
+        return mitarbeiter;
+    }
+
+    public long getKosten() {
+        return kosten;
+    }
+
+    public void setKosten(long kosten) {
+        this.kosten = kosten;
+    }
+
+    public int getArbeitsgeschwindigkeit() {
+        return arbeitsgeschwindigkeit;
+    }
+
+    public void setArbeitsgeschwindigkeit(int arbeitsgeschwindigkeit) {
+        this.arbeitsgeschwindigkeit = arbeitsgeschwindigkeit;
+    }
+}

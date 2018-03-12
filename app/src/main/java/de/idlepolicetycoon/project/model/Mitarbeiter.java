@@ -7,7 +7,6 @@ package de.idlepolicetycoon.project.model;
 public class Mitarbeiter {
 
     private String name;
-    private int arbeitsgeschwindigkeit;
     private int image;
     private double x;
     private double y;
@@ -20,14 +19,6 @@ public class Mitarbeiter {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getArbeitsgeschwindigkeit() {
-        return arbeitsgeschwindigkeit;
-    }
-
-    public void setArbeitsgeschwindigkeit(int arbeitsgeschwindigkeit) {
-        this.arbeitsgeschwindigkeit = arbeitsgeschwindigkeit;
     }
 
     public int getImage() {
