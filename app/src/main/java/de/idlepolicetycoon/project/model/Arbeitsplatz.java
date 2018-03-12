@@ -13,7 +13,7 @@ public class Arbeitsplatz {
     private int arbeitsgeschwindigkeit;
     private int image;
 
-    public Arbeitsplatz(@NonNull Mitarbeiter mitarbeiter, @NonNull int image){
+    public Arbeitsplatz(@NonNull Mitarbeiter mitarbeiter, int image){
         this.mitarbeiter = mitarbeiter;
         this.image = image;
     }
