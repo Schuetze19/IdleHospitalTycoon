@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import com.example.dennis.idlepolicetycoon.R;
 
+import de.idlepolicetycoon.project.model.Polizist;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

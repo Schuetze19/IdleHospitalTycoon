@@ -8,7 +8,7 @@ public class Mitarbeiter {
 
     private String name;
     private int arbeitsgeschwindigkeit;
-    private String image;
+    private int image;
     private double x;
     private double y;
 
@@ -30,12 +30,12 @@ public class Mitarbeiter {
         this.arbeitsgeschwindigkeit = arbeitsgeschwindigkeit;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setImage(int imageRessource) {
+        this.image = imageRessource;
     }
 
     public double getX() {
