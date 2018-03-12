@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
  */
 
 public class Spezialist extends Mitarbeiter{
+
     public Spezialist(@NonNull int image) {
         super(image);
     }

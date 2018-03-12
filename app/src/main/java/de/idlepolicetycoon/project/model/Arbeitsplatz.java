@@ -37,4 +37,8 @@ public class Arbeitsplatz {
     public void setArbeitsgeschwindigkeit(int arbeitsgeschwindigkeit) {
         this.arbeitsgeschwindigkeit = arbeitsgeschwindigkeit;
     }
+
+    public int getImage() {
+        return image;
+    }
 }
