@@ -1,26 +1,33 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="de.idlepolicetycoon.project.view.GeldUebersichtFragment">
 
-    <RelativeLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="18dp">
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout">
 
         <TextView
             android:id="@+id/geld"
-            android:layout_width="340dp"
-            android:layout_height="18dp"
-            android:text="@string/fragment_geld_uebersicht_euro_label" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/fragment_geld_uebersicht_euro_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/spritze"
-            android:layout_width="match_parent"
-            android:layout_height="18dp"
-            android:layout_toRightOf="@id/geld"
-            android:text="@string/fragment_geld_uebersicht_spritze_label" />
-    </RelativeLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/fragment_geld_uebersicht_spritze_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
 
 
 </FrameLayout>
