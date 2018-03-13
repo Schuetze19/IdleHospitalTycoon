@@ -10,6 +10,7 @@ public class Bett {
     private Patient patient;
     private double heilungsdauerVerkuerzung;
     private long kosten;
+    private int level;
 
     public Bett(int image){
         this.image = image;
@@ -45,5 +46,13 @@ public class Bett {
 
     public void setKosten(long kosten) {
         this.kosten = kosten;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 }

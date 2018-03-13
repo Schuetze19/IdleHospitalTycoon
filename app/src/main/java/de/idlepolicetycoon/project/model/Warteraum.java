@@ -12,6 +12,7 @@ public class Warteraum {
     private long kapazitaet;
     private List<Patient> patienten = new ArrayList<>();
     private long kosten;
+    private int level;
 
     public Warteraum(long kapazitaet){
         this.kapazitaet = kapazitaet;
@@ -53,4 +54,11 @@ public class Warteraum {
         }
     }
 
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
 }

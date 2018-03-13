@@ -14,6 +14,7 @@ public class Krankenwagen {
     private long kapazitaet;
     private double x,y;
     private long kosten;
+    private int level;
 
     public Krankenwagen(List<Patient> patienten, double geschwindigkeit,long kapazitaet, double x, double y){
         this.patienten = patienten;
@@ -69,5 +70,13 @@ public class Krankenwagen {
 
     public void setKosten(long kosten) {
         this.kosten = kosten;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 }

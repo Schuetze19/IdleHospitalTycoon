@@ -10,6 +10,7 @@ public class Patient {
 
     private String name;
     private double behandlungsdauer;
+    private int level;
 
     public Patient(@NonNull String name, double behandlungsdauer){
         this.name = name;
@@ -30,5 +31,13 @@ public class Patient {
 
     public void setBehandlungsdauer(double behandlungsdauer) {
         this.behandlungsdauer = behandlungsdauer;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 }

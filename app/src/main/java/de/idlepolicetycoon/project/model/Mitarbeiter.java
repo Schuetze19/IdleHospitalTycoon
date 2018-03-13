@@ -11,6 +11,7 @@ public class Mitarbeiter {
     private double x;
     private double y;
     private long kosten;
+    private int level;
 
     public Mitarbeiter(int image){this.image = image;}
 
@@ -48,5 +49,13 @@ public class Mitarbeiter {
 
     public void setKosten(long kosten) {
         this.kosten = kosten;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 }
