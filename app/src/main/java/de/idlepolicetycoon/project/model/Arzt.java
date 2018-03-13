@@ -6,8 +6,10 @@ package de.idlepolicetycoon.project.model;
 
 public class Arzt extends Mitarbeiter {
 
-    public Arzt(int image) {
+    public Arzt(int image, double x, double y) {
         super(image);
+        setX(x);
+        setY(y);
     }
 
 }

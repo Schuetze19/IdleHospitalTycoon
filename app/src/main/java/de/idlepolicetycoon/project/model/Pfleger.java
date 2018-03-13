@@ -6,8 +6,10 @@ package de.idlepolicetycoon.project.model;
 
 public class Pfleger extends Mitarbeiter {
 
-    public Pfleger(int image) {
+    public Pfleger(int image,double x, double y) {
         super(image);
+        setX(x);
+        setY(y);
     }
 
 }
