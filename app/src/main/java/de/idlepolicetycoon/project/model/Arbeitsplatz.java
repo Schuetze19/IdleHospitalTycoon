@@ -10,7 +10,7 @@ public class Arbeitsplatz {
 
     private Mitarbeiter mitarbeiter;
     private long kosten;
-    private int arbeitsgeschwindigkeit;
+    private double arbeitsgeschwindigkeit;
     private int image;
 
     public Arbeitsplatz(@NonNull Mitarbeiter mitarbeiter, int image){
@@ -30,11 +30,11 @@ public class Arbeitsplatz {
         this.kosten = kosten;
     }
 
-    public int getArbeitsgeschwindigkeit() {
+    public double getArbeitsgeschwindigkeit() {
         return arbeitsgeschwindigkeit;
     }
 
-    public void setArbeitsgeschwindigkeit(int arbeitsgeschwindigkeit) {
+    public void setArbeitsgeschwindigkeit(double arbeitsgeschwindigkeit) {
         this.arbeitsgeschwindigkeit = arbeitsgeschwindigkeit;
     }
 
