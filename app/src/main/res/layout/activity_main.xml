@@ -23,7 +23,7 @@
             android:layout_height="match_parent"
             android:contentDescription="Strasse"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            app:srcCompat="@drawable/strassebsp" />
     </FrameLayout>
 
     <FrameLayout
@@ -46,7 +46,7 @@
             android:contentDescription="Warteraum"
             android:cropToPadding="false"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            app:srcCompat="@drawable/warteraum" />
     </FrameLayout>
 
     <FrameLayout
@@ -67,6 +67,6 @@
             android:contentDescription="Aufnahme"
             android:cropToPadding="false"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            app:srcCompat="@drawable/hospital" />
     </FrameLayout>
 </android.support.constraint.ConstraintLayout>
