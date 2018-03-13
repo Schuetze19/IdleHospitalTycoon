@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name" translatable="false">Idle Hospital Tycoon</string>
+
+    <!-- LABELS -->
     <string name="fragment_geld_uebersicht_euro_label" translatable="false">Euro</string>
     <string name="fragment_geld_uebersicht_spritze_label">Syringe</string>
+
+    <!-- PLATZHALTER -->
+
+
 </resources>

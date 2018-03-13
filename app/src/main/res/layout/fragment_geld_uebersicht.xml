@@ -11,13 +11,13 @@
         <TextView
             android:id="@+id/geld"
             android:layout_width="340dp"
-            android:layout_height="20dp"
+            android:layout_height="18dp"
             android:text="@string/fragment_geld_uebersicht_euro_label" />
 
         <TextView
             android:id="@+id/spritze"
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="18dp"
             android:layout_toRightOf="@id/geld"
             android:text="@string/fragment_geld_uebersicht_spritze_label" />
     </RelativeLayout>
