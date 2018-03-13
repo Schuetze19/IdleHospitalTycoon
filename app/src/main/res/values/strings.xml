@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Idle Police Tycoon</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name" translatable="false">Idle Hospital Tycoon</string>
+    <string name="fragment_geld_uebersicht_euro_label" translatable="false">Euro</string>
+    <string name="fragment_geld_uebersicht_spritze_label">Syringe</string>
 </resources>
