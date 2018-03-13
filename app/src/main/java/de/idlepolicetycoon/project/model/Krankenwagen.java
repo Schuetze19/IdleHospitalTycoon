@@ -13,6 +13,7 @@ public class Krankenwagen {
     private double geschwindigkeit;
     private long kapazitaet;
     private double x,y;
+    private long kosten;
 
     public Krankenwagen(List<Patient> patienten, double geschwindigkeit,long kapazitaet, double x, double y){
         this.patienten = patienten;
@@ -62,4 +63,11 @@ public class Krankenwagen {
         this.y = y;
     }
 
+    public long getKosten() {
+        return kosten;
+    }
+
+    public void setKosten(long kosten) {
+        this.kosten = kosten;
+    }
 }

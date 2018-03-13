@@ -10,6 +10,7 @@ public class Pfleger extends Mitarbeiter {
         super(image);
         setX(x);
         setY(y);
+        setKosten(10);
     }
 
 }

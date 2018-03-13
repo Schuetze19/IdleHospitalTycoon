@@ -11,6 +11,7 @@ public class Warteraum {
 
     private long kapazitaet;
     private List<Patient> patienten = new ArrayList<>();
+    private long kosten;
 
     public Warteraum(long kapazitaet){
         this.kapazitaet = kapazitaet;
@@ -30,6 +31,14 @@ public class Warteraum {
 
     public void setPatienten(List<Patient> patienten) {
         this.patienten = patienten;
+    }
+
+    public long getKosten() {
+        return kosten;
+    }
+
+    public void setKosten(long kosten) {
+        this.kosten = kosten;
     }
 
     public void addPatientenZumWarteraum(Krankenwagen krankenwagen){
