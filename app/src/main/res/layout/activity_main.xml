@@ -1,72 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
     tools:context="de.idlepolicetycoon.project.view.MainActivity">
 
-    <FrameLayout
-        android:layout_width="84dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+    <include layout="@layout/fragment_geld_uebersicht"></include>
+    <include layout="@layout/fragment_fahrstrecke"></include>
+    <include layout="@layout/fragment_warteraum"></include>
+    <include layout="@layout/fragment_spielflaeche"></include>
 
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="Strasse"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/strassebsp" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="131dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:adjustViewBounds="false"
-            android:contentDescription="Warteraum"
-            android:cropToPadding="false"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/warteraum" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/frameLayout"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:adjustViewBounds="false"
-            android:contentDescription="Aufnahme"
-            android:cropToPadding="false"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/hospital" />
-    </FrameLayout>
 </android.support.constraint.ConstraintLayout>
