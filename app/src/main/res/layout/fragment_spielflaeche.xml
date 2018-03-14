@@ -12,10 +12,11 @@
         android:layout_marginTop="16dp">
 
         <ImageView
+            android:id="@+id/spielflaeche_background"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:src="@drawable/hospital" />
+            android:contentDescription="Hospital"
+            android:scaleType="fitXY" />
 
 
     </android.support.constraint.ConstraintLayout>
