@@ -11,7 +11,6 @@ public class Patient extends Mitarbeiter{
     private double behandlungsdauer;
 
     public Patient(@NonNull String name, double behandlungsdauer){
-        super();
         setName(name);
         this.behandlungsdauer = behandlungsdauer;
     }
