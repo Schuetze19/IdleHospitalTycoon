@@ -9,11 +9,13 @@ import de.idlepolicetycoon.project.controller.UpgradeDialogController;
 
 public class MainActivity extends AppCompatActivity {
 
+    UpgradeDialogController upgradeDialogController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        upgradeDialogController = new UpgradeDialogController(this.getWindow().getDecorView(), this);
     }
 }
