@@ -20,9 +20,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         upgradeDialogController = new UpgradeDialogController(this.getWindow().getDecorView(), this);
-        loadBackgroundImage(this.getWindow().getDecorView(),R.id.fahrstrecke_background,R.drawable.strassebsp);
-        loadBackgroundImage(this.getWindow().getDecorView(),R.id.warteraum_background,R.drawable.warteraum);
-        loadBackgroundImage(this.getWindow().getDecorView(),R.id.spielflaeche_background,R.drawable.hospital);
+        final View view = this.getWindow().getDecorView();
+        loadBackgroundImage(view,R.id.fahrstrecke_background,R.drawable.strassebsp);
+        loadBackgroundImage(view,R.id.warteraum_background,R.drawable.warteraum);
+        loadBackgroundImage(view,R.id.spielflaeche_background,R.drawable.hospital);
     }
 
     private void loadBackgroundImage(View view, int viewElementId, int drawable){
