@@ -7,15 +7,18 @@ import java.util.List;
  * Created by Bonziller on 13.03.2018.
  */
 
-public class Warteraum {
+public class Warteraum extends Gegenstand{
 
     private long kapazitaet;
     private List<Patient> patienten = new ArrayList<>();
-    private long kosten;
-    private int level;
 
     public Warteraum(long kapazitaet){
         this.kapazitaet = kapazitaet;
+    }
+
+    public Warteraum(long kapazitaet, List<Patient> patienten){
+        this.kapazitaet = kapazitaet;
+        this.patienten = patienten;
     }
 
     public long getKapazitaet() {
@@ -34,14 +37,6 @@ public class Warteraum {
         this.patienten = patienten;
     }
 
-    public long getKosten() {
-        return kosten;
-    }
-
-    public void setKosten(long kosten) {
-        this.kosten = kosten;
-    }
-
     public void addPatientenZumWarteraum(Krankenwagen krankenwagen){
         int patientenAnzahl = krankenwagen.getPatienten().size() + patienten.size();
         if(patienten.size() < kapazitaet && patientenAnzahl > kapazitaet){
@@ -52,13 +47,5 @@ public class Warteraum {
         }else if(patientenAnzahl <= kapazitaet){
             this.patienten.addAll(krankenwagen.getPatienten());
         }
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
     }
 }

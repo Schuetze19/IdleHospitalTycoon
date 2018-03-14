@@ -6,11 +6,26 @@ package de.idlepolicetycoon.project.model;
 
 public class Pfleger extends Mitarbeiter {
 
-    public Pfleger(int image,double x, double y, long kosten) {
-        super(image);
-        setX(x);
-        setY(y);
-        setKosten(kosten);
+    private double geschwindigkeit;
+    private double aufnahmeGeschwindigkeit;
+
+    public Pfleger(int image,double x, double y, long upgradekosten, int level) {
+        super(x, y, image, upgradekosten, level);
     }
 
+    public double getGeschwindigkeit() {
+        return geschwindigkeit;
+    }
+
+    public void setGeschwindigkeit(double geschwindigkeit) {
+        this.geschwindigkeit = geschwindigkeit;
+    }
+
+    public double getAufnahmeGeschwindigkeit() {
+        return aufnahmeGeschwindigkeit;
+    }
+
+    public void setAufnahmeGeschwindigkeit(double aufnahmeGeschwindigkeit) {
+        this.aufnahmeGeschwindigkeit = aufnahmeGeschwindigkeit;
+    }
 }

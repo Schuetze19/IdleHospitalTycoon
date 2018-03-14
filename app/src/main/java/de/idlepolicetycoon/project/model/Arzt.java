@@ -6,11 +6,26 @@ package de.idlepolicetycoon.project.model;
 
 public class Arzt extends Mitarbeiter {
 
-    public Arzt(int image, double x, double y, long kosten) {
-        super(image);
-        setX(x);
-        setY(y);
-        setKosten(kosten);
+    private double geschwindigkeit;
+    private double heilung;
+
+    public Arzt(int image, double x, double y, long upgradekosten, int level) {
+        super(x, y, image, upgradekosten, level);
     }
 
+    public double getGeschwindigkeit() {
+        return geschwindigkeit;
+    }
+
+    public void setGeschwindigkeit(double geschwindigkeit) {
+        this.geschwindigkeit = geschwindigkeit;
+    }
+
+    public double getHeilung() {
+        return heilung;
+    }
+
+    public void setHeilung(double heilung) {
+        this.heilung = heilung;
+    }
 }

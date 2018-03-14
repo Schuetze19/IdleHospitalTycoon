@@ -4,16 +4,20 @@ package de.idlepolicetycoon.project.model;
  * Created by Dennis on 12.03.2018.
  */
 
-public class Mitarbeiter {
+public class Mitarbeiter extends Grundelemente{
 
     private String name;
     private int image;
-    private double x;
-    private double y;
-    private long kosten;
-    private int level;
 
-    public Mitarbeiter(int image){this.image = image;}
+    public Mitarbeiter(){}
+
+    public Mitarbeiter(double x, double y, int image, long upgradekosten,int level){
+        this.image = image;
+        setX(x);
+        setY(y);
+        setUpgradekosten(upgradekosten);
+        setLevel(level);
+    }
 
     public String getName() {
         return name;
@@ -27,35 +31,7 @@ public class Mitarbeiter {
         return image;
     }
 
-    public double getX() {
-        return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
-
-    public long getKosten() {
-        return kosten;
-    }
-
-    public void setKosten(long kosten) {
-        this.kosten = kosten;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
+    public void setImage(int image) {
+        this.image = image;
     }
 }

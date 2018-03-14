@@ -4,13 +4,12 @@ package de.idlepolicetycoon.project.model;
  * Created by Bonziller on 13.03.2018.
  */
 
-public class Bett {
+public class Bett extends Gegenstand{
 
     private int image;
     private Patient patient;
     private double heilungsdauerVerkuerzung;
-    private long kosten;
-    private int level;
+    private long gewinnPatient;
 
     public Bett(int image){
         this.image = image;
@@ -40,19 +39,11 @@ public class Bett {
         this.heilungsdauerVerkuerzung = heilungsdauerVerkuerzung;
     }
 
-    public long getKosten() {
-        return kosten;
+    public long getGewinnPatient() {
+        return gewinnPatient;
     }
 
-    public void setKosten(long kosten) {
-        this.kosten = kosten;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
+    public void setGewinnPatient(long gewinnPatient) {
+        this.gewinnPatient = gewinnPatient;
     }
 }
