@@ -1,10 +1,10 @@
 package de.idlepolicetycoon.project.controller;
 
-import android.app.FragmentTransaction;
-import android.support.constraint.ConstraintLayout;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.dennis.idlepolicetycoon.R;
 
@@ -19,8 +19,9 @@ import de.idlepolicetycoon.project.view.KrankenwagenUpgradeFragment;
 public class UpgradeDialogController{
 
     private Button upgradeButtonKrankenwagen;
+    private Button btn_close;
     AppCompatActivity appCompatActivity;
-
+    private KrankenwagenUpgradeFragment test;
 
     public UpgradeDialogController(View view, AppCompatActivity appCompatActivity){
         this.appCompatActivity = appCompatActivity;
@@ -30,8 +31,26 @@ public class UpgradeDialogController{
         upgradeButtonKrankenwagen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.constraintLayoutMain, new KrankenwagenUpgradeFragment()).commit();
+                test = new KrankenwagenUpgradeFragment();
+                showFragmentAufView(R.id.constraintLayoutMain, test);
+
+                btn_close = (Button) view.findViewById(R.id.btn_close);
+
+                //btn_close.setOnClickListener(new View.OnClickListener() {
+                 //   @Override
+                 //   public void onClick(View view) {
+                  //      closeFragment(test);
+                 //   }
+                //});
             }
         });
+    }
+
+    public void showFragmentAufView(int containerViewID, Fragment fragment){
+        appCompatActivity.getSupportFragmentManager().beginTransaction().replace(containerViewID, fragment).commit();
+    }
+
+    public void closeFragment(Fragment fragment){
+        appCompatActivity.getSupportFragmentManager().beginTransaction().remove(fragment).commit();
     }
 }

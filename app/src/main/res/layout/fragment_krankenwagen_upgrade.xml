@@ -1,50 +1,79 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayoutKrankenwagen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="de.idlepolicetycoon.project.view.KrankenwagenUpgradeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="192dp"
-        android:src="@drawable/krankenwagen"
-        tools:layout_conversion_absoluteHeight="311dp"
-        tools:layout_conversion_absoluteWidth="592dp"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="4dp" />
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayoutUpgradeKrakenwagen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/holo_blue_light">
 
-    <TextView
-        android:id="@+id/lbl_Geschwindigkeit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Geschwindigkeit"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="204dp" />
+        <ImageView
+            android:id="@+id/imageViewKrankenwagen"
+            android:layout_width="300dp"
+            android:layout_height="192dp"
+            android:layout_marginEnd="144dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/krankenwagen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_conversion_absoluteHeight="311dp"
+            tools:layout_conversion_absoluteWidth="592dp" />
 
-    <TextView
-        android:id="@+id/lbl_Kapazitaet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kapazität"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="267dp" />
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:text="CLOSE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_geschwindigkeit"
-        android:layout_width="89dp"
-        android:layout_height="41dp"
-        android:text="Upgrade"
-        tools:layout_editor_absoluteX="340dp"
-        tools:layout_editor_absoluteY="196dp" />
+        <TextView
+            android:id="@+id/lbl_Geschwindigkeit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="340dp"
+            android:layout_marginTop="224dp"
+            android:text="Geschwindigkeit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_kapazitaet"
-        android:layout_width="89dp"
-        android:layout_height="41dp"
-        android:text="Upgrade"
-        tools:layout_editor_absoluteX="340dp"
-        tools:layout_editor_absoluteY="254dp" />
+        <TextView
+            android:id="@+id/lbl_Kapazitaet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="384dp"
+            android:layout_marginTop="264dp"
+            android:text="Kapazität"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/btn_geschwindigkeit"
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="144dp"
+            android:layout_marginTop="212dp"
+            android:text="Upgrade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_kapazitaet"
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="144dp"
+            android:layout_marginTop="252dp"
+            android:text="Upgrade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>
