@@ -45,7 +45,6 @@ public class ProgressBarController{
                         e.printStackTrace();
                     }
                 }
-                System.out.println(">>>>>>>>>>>DONE<<<<<<<<<<<<<");
             }
         }).start();
     }
