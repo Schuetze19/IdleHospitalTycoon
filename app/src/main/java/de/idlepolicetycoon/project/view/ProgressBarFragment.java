@@ -22,8 +22,9 @@ public class ProgressBarFragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_progressbar, container, false);
         ProgressBar progressBar = view.findViewById(R.id.progressbar);
-        new ProgressBarController(progressBar,view).startProgress(10,5);
-        // ProgressbarHelper aufrufen
+
+        // dort, wo man das Fragment rein lädt (zum commit), muss man vorher "setArguments()" machen.
+        new ProgressBarController(progressBar,view).startProgress(2018);
         return view;
     }
 
