@@ -42,9 +42,7 @@ public class ProgressBarFragment extends android.support.v4.app.Fragment {
         super.onStart();
         Bundle args = getArguments();
         if(args != null){
-            if(progressBar != null && executeOnFinish != null) {
-                new ProgressBarController(progressBar).startProgress(args.getInt(dauerInMillisKey),executeOnFinish);
-            }
+            new ProgressBarController(progressBar).startProgress(args.getInt(dauerInMillisKey),executeOnFinish);
         }
     }
 

@@ -41,10 +41,12 @@ public class ProgressBarController{
                     }
                 }
                 progressBar.setProgress(progressBar.getMax());
-                try {
-                    onFinish.call();
-                } catch (Exception e) {
-                    e.printStackTrace();
+                if(onFinish != null) {
+                    try {
+                        onFinish.call();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }).start();

@@ -1,19 +1,13 @@
 package de.idlepolicetycoon.project.controller;
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import com.example.dennis.idlepolicetycoon.R;
 
-import java.util.concurrent.Callable;
-import java.util.logging.Logger;
-
 import de.idlepolicetycoon.project.view.KrankenwagenUpgradeFragment;
-import de.idlepolicetycoon.project.view.ProgressBarFragment;
 
 /**
  * Created by Dennis on 13.03.2018.
