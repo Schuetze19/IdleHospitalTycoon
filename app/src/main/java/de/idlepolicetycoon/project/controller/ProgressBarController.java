@@ -32,7 +32,6 @@ public class ProgressBarController{
                 while(g < dauerInMillis){
                     g+= progress;
                     progressBar.setProgress(g);
-                    // TryCatch anpassen, sodass der Ladebalken zur richtigen Zeit voll ist. 1 Sekunde = 1000 Millisekunden
                     try {
                         Thread.sleep(progress);
                     } catch (InterruptedException e) {
