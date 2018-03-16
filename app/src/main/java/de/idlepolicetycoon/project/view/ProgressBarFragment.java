@@ -18,14 +18,36 @@ public class ProgressBarFragment extends android.support.v4.app.Fragment {
 
     public ProgressBarFragment(){}
 
+    public final static String dauerInMillisKey = "Millis";
+    private int dauerInMillis;
+    private View view;
+    private ProgressBar progressBar;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_progressbar, container, false);
-        ProgressBar progressBar = view.findViewById(R.id.progressbar);
+        view = inflater.inflate(R.layout.fragment_progressbar, container, false);
+        progressBar = view.findViewById(R.id.progressbar);
 
-        // dort, wo man das Fragment rein lädt (zum commit), muss man vorher "setArguments()" machen.
-        new ProgressBarController(progressBar,view).startProgress(2018);
+        if (savedInstanceState != null) {
+            dauerInMillis = savedInstanceState.getInt(dauerInMillisKey);
+        }
         return view;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        Bundle args = getArguments();
+        if(args != null){
+            if(progressBar != null && view != null) {
+                new ProgressBarController(progressBar, view).startProgress(args.getInt(dauerInMillisKey));
+            }
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(dauerInMillisKey, dauerInMillis);
+    }
 }

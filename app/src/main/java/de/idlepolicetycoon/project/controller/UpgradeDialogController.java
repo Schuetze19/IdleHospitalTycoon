@@ -1,5 +1,6 @@
 package de.idlepolicetycoon.project.controller;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,6 +12,7 @@ import com.example.dennis.idlepolicetycoon.R;
 import java.util.logging.Logger;
 
 import de.idlepolicetycoon.project.view.KrankenwagenUpgradeFragment;
+import de.idlepolicetycoon.project.view.ProgressBarFragment;
 
 /**
  * Created by Dennis on 13.03.2018.
@@ -32,6 +34,11 @@ public class UpgradeDialogController{
             @Override
             public void onClick(View view) {
                 test = new KrankenwagenUpgradeFragment();
+
+                /* //FÜR PRGORESSBAR BENÖTIGT
+                Bundle bundle = new Bundle();
+                bundle.putInt(ProgressBarFragment.dauerInMillisKey,3120);
+                test.setArguments(bundle);*/
                 showFragmentAufView(R.id.constraintLayoutMain, test);
 
                 btn_close = (Button) view.findViewById(R.id.btn_close);

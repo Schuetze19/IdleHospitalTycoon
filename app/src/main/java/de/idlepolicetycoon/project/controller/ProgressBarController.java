@@ -29,7 +29,7 @@ public class ProgressBarController{
                 progressBar.setMax(dauerInMillis);
                 final int progress = dauerInMillis / 50;
                 int g = 0;
-                while(g < dauerInMillis){
+                while(g+progress < dauerInMillis){
                     g+= progress;
                     progressBar.setProgress(g);
                     try {
@@ -38,8 +38,8 @@ public class ProgressBarController{
                         e.printStackTrace();
                     }
                 }
+                progressBar.setProgress(progressBar.getMax());
             }
         }).start();
     }
-
 }
