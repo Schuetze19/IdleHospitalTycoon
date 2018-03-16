@@ -6,24 +6,24 @@ package de.idlepolicetycoon.project.model;
 
 public class Grundelemente {
 
-    private double x;
-    private double y;
+    private float x;
+    private float y;
     private long upgradekosten;
     private int level;
 
-    public double getX() {
+    public float getX() {
         return x;
     }
 
-    public void setX(double x) {
+    public void setX(float x) {
         this.x = x;
     }
 
-    public double getY() {
+    public float getY() {
         return y;
     }
 
-    public void setY(double y) {
+    public void setY(float y) {
         this.y = y;
     }
 

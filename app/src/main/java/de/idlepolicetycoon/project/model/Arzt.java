@@ -9,7 +9,7 @@ public class Arzt extends Mitarbeiter {
     private double geschwindigkeit;
     private double heilung;
 
-    public Arzt(int image, double x, double y, long upgradekosten, int level) {
+    public Arzt(int image, float x, float y, long upgradekosten, int level) {
         super(x, y, image, upgradekosten, level);
     }
 

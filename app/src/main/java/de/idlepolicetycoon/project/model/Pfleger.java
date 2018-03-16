@@ -9,7 +9,7 @@ public class Pfleger extends Mitarbeiter {
     private double geschwindigkeit;
     private double aufnahmeGeschwindigkeit;
 
-    public Pfleger(int image,double x, double y, long upgradekosten, int level) {
+    public Pfleger(int image,float x, float y, long upgradekosten, int level) {
         super(x, y, image, upgradekosten, level);
     }
 

@@ -13,10 +13,10 @@ public class Krankenwagen extends Gegenstand{
     private double geschwindigkeit;
     private long kapazitaet;
 
-    public Krankenwagen(double x, double y, List<Patient> patienten, double geschwindigkeit,long kapazitaet){
+    public Krankenwagen(float x, float y, List<Patient> patienten, double geschwindigkeit,long kapazitaet){
         setX(x);
         setY(y);
-        this.patienten = patienten;
+        setPatienten(patienten);
         this.geschwindigkeit = geschwindigkeit;
         this.kapazitaet = kapazitaet;
     }
@@ -26,7 +26,18 @@ public class Krankenwagen extends Gegenstand{
     }
 
     public void setPatienten(List<Patient> patienten) {
-        this.patienten = patienten;
+        if(patienten != null){
+            if(patienten.size() <= kapazitaet) {
+                this.patienten = patienten;
+            }else{
+                for (int i = 0; i < kapazitaet;i++){
+                    this.patienten.clear();
+                    this.patienten.add(patienten.get(i));
+                }
+            }
+        }else{
+            this.patienten.clear();
+        }
     }
 
     public double getGeschwindigkeit() {

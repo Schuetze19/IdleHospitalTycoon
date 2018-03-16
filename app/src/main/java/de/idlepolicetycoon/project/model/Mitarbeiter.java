@@ -11,7 +11,7 @@ public class Mitarbeiter extends Grundelemente{
 
     public Mitarbeiter(){}
 
-    public Mitarbeiter(double x, double y, int image, long upgradekosten,int level){
+    public Mitarbeiter(float x, float y, int image, long upgradekosten,int level){
         this.image = image;
         setX(x);
         setY(y);
