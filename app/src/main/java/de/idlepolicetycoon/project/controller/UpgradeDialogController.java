@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 
 import com.example.dennis.idlepolicetycoon.R;
 
+import java.util.concurrent.Callable;
 import java.util.logging.Logger;
 
 import de.idlepolicetycoon.project.view.KrankenwagenUpgradeFragment;
@@ -37,8 +38,12 @@ public class UpgradeDialogController{
 
                 /* //FÜR PRGORESSBAR BENÖTIGT
                 Bundle bundle = new Bundle();
-                bundle.putInt(ProgressBarFragment.dauerInMillisKey,3120);
-                test.setArguments(bundle);*/
+                bundle.putInt(ProgressBarFragment.dauerInMillisKey,1453);
+                test.setArguments(bundle);
+                test.setOnProgressFinishedCallable(() -> {
+                    System.out.println("Progress ist fertiggestellt");
+                    return null;
+                });*/
                 showFragmentAufView(R.id.constraintLayoutMain, test);
 
                 btn_close = (Button) view.findViewById(R.id.btn_close);

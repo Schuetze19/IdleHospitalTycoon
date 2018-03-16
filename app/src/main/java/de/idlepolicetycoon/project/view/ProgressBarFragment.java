@@ -8,6 +8,8 @@ import android.widget.ProgressBar;
 
 import com.example.dennis.idlepolicetycoon.R;
 
+import java.util.concurrent.Callable;
+
 import de.idlepolicetycoon.project.controller.ProgressBarController;
 
 /**
@@ -22,6 +24,7 @@ public class ProgressBarFragment extends android.support.v4.app.Fragment {
     private int dauerInMillis;
     private View view;
     private ProgressBar progressBar;
+    private Callable<Void> executeOnFinish;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -39,8 +42,8 @@ public class ProgressBarFragment extends android.support.v4.app.Fragment {
         super.onStart();
         Bundle args = getArguments();
         if(args != null){
-            if(progressBar != null && view != null) {
-                new ProgressBarController(progressBar, view).startProgress(args.getInt(dauerInMillisKey));
+            if(progressBar != null && executeOnFinish != null) {
+                new ProgressBarController(progressBar).startProgress(args.getInt(dauerInMillisKey),executeOnFinish);
             }
         }
     }
@@ -50,4 +53,9 @@ public class ProgressBarFragment extends android.support.v4.app.Fragment {
         super.onSaveInstanceState(outState);
         outState.putInt(dauerInMillisKey, dauerInMillis);
     }
+
+    public void setOnProgressFinishedCallable(Callable<Void> onFinish){
+        executeOnFinish = onFinish;
+    }
+
 }

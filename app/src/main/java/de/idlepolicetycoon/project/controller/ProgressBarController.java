@@ -4,6 +4,8 @@ import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.ProgressBar;
 
+import java.util.concurrent.Callable;
+
 /**
  * Created by Bonziller on 15.03.2018.
  */
@@ -22,7 +24,7 @@ public class ProgressBarController{
         this.view = view;
     }
 
-    public void startProgress(final int dauerInMillis){
+    public void startProgress(final int dauerInMillis, Callable<Void> onFinish){
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -39,6 +41,11 @@ public class ProgressBarController{
                     }
                 }
                 progressBar.setProgress(progressBar.getMax());
+                try {
+                    onFinish.call();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }).start();
     }
