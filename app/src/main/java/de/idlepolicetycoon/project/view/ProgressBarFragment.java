@@ -36,6 +36,7 @@ public class ProgressBarFragment extends android.support.v4.app.Fragment {
     private ProgressBar progressBar;
     private Callable<Void> executeOnFinish;
     private ConstraintLayout constraintLayout;
+    private Runnable inProgress;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -70,7 +71,7 @@ public class ProgressBarFragment extends android.support.v4.app.Fragment {
                     constraintLayout.setMaxHeight(height);
                 }
             }
-            new ProgressBarController(progressBar).startProgress(args.getInt(dauerInMillisKey),executeOnFinish);
+            new ProgressBarController(progressBar).startProgress(args.getInt(dauerInMillisKey),executeOnFinish,inProgress);
         }
     }
 
@@ -86,6 +87,10 @@ public class ProgressBarFragment extends android.support.v4.app.Fragment {
 
     public void setOnProgressFinishedCallable(Callable<Void> onFinish){
         executeOnFinish = onFinish;
+    }
+
+    public void setInProgressRunnable(Runnable inProgress){
+        this.inProgress = inProgress;
     }
 
 }

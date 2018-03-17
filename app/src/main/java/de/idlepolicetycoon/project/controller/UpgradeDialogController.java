@@ -37,6 +37,12 @@ public class UpgradeDialogController{
                 test.setOnProgressFinishedCallable(() -> {
                     System.out.println("Progress ist fertiggestellt");
                     return null;
+                });
+                test.setInProgressRunnable(new Runnable() {
+                    @Override
+                    public void run() {
+                        // INPROGRESS Aktion
+                    }
                 });*/
                 showFragmentAufView(R.id.constraintLayoutMain, test);
 

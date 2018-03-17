@@ -24,7 +24,7 @@ public class ProgressBarController{
         this.view = view;
     }
 
-    public void startProgress(final int dauerInMillis, Callable<Void> onFinish){
+    public void startProgress(final int dauerInMillis, Callable<Void> onFinish, Runnable inProgress){
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -32,6 +32,9 @@ public class ProgressBarController{
                 final int progress = dauerInMillis / 50;
                 int g = 0;
                 while(g+progress < dauerInMillis){
+                    if(inProgress != null) {
+                        inProgress.run();
+                    }
                     g+= progress;
                     progressBar.setProgress(g);
                     try {
