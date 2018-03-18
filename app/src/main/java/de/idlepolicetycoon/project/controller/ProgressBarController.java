@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 
 import java.util.concurrent.Callable;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Created by Bonziller on 15.03.2018.
@@ -14,6 +15,7 @@ public class ProgressBarController{
 
     private View view;
     private ProgressBar progressBar;
+    private AtomicBoolean cancelRequest = new AtomicBoolean(false);
 
     public ProgressBarController(@NonNull ProgressBar progressBar){
         this.progressBar = progressBar;
@@ -24,7 +26,7 @@ public class ProgressBarController{
         this.view = view;
     }
 
-    public void startProgress(final int dauerInMillis, Callable<Void> onFinish, Runnable inProgress){
+    public void startProgress(final int dauerInMillis, Callable<Void> onFinish, Runnable inProgress, Runnable onCancel){
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -32,6 +34,12 @@ public class ProgressBarController{
                 final int progress = dauerInMillis / 50;
                 int g = 0;
                 while(g+progress < dauerInMillis){
+                    if(cancelRequest.get()){
+                        if(onCancel != null) {
+                            onCancel.run();
+                            Thread.currentThread().interrupt();
+                        }
+                    }
                     if(inProgress != null) {
                         inProgress.run();
                     }
@@ -40,11 +48,12 @@ public class ProgressBarController{
                     try {
                         Thread.sleep(progress);
                     } catch (InterruptedException e) {
-                        e.printStackTrace();
+                        Thread.currentThread().interrupt();
+                        g = dauerInMillis;
                     }
                 }
                 progressBar.setProgress(progressBar.getMax());
-                if(onFinish != null) {
+                if(!cancelRequest.get() && onFinish != null) {
                     try {
                         onFinish.call();
                     } catch (Exception e) {
@@ -53,5 +62,9 @@ public class ProgressBarController{
                 }
             }
         }).start();
+    }
+
+    public void cancelProgress(){
+        cancelRequest.set(true);
     }
 }

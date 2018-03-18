@@ -32,15 +32,16 @@ public class ProgressBarFragment extends android.support.v4.app.Fragment {
     private int width;
     private int height;
     private int dauerInMillis;
-    private View view;
     private ProgressBar progressBar;
     private Callable<Void> executeOnFinish;
     private ConstraintLayout constraintLayout;
     private Runnable inProgress;
+    private Runnable onCancel;
+    private ProgressBarController progressBarController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_progressbar, container, false);
+        View view = inflater.inflate(R.layout.fragment_progressbar, container, false);
         progressBar = view.findViewById(R.id.progressbar);
         constraintLayout = view.findViewById(R.id.constraintLayoutProgressbar);
 
@@ -51,6 +52,7 @@ public class ProgressBarFragment extends android.support.v4.app.Fragment {
             width = savedInstanceState.getInt(progressbarWidthKey);
             height = savedInstanceState.getInt(progressbarHeightKey);
         }
+        progressBarController = new ProgressBarController(progressBar);
         return view;
     }
 
@@ -71,7 +73,7 @@ public class ProgressBarFragment extends android.support.v4.app.Fragment {
                     constraintLayout.setMaxHeight(height);
                 }
             }
-            new ProgressBarController(progressBar).startProgress(args.getInt(dauerInMillisKey),executeOnFinish,inProgress);
+            progressBarController.startProgress(args.getInt(dauerInMillisKey),executeOnFinish,inProgress,onCancel);
         }
     }
 
@@ -93,4 +95,15 @@ public class ProgressBarFragment extends android.support.v4.app.Fragment {
         this.inProgress = inProgress;
     }
 
+    public void setOnCancelRunnable(Runnable onCancel){this.onCancel = onCancel;}
+
+    public void closeRunningProgress(){
+        progressBarController.cancelProgress();
+    }
+
+    public void setProgressBarVisibility(int visibility){
+        if(progressBar != null){
+            progressBar.setVisibility(visibility);
+        }
+    }
 }

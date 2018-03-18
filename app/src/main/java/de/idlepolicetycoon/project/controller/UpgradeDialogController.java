@@ -29,10 +29,9 @@ public class UpgradeDialogController{
             @Override
             public void onClick(View view) {
                 test = new KrankenwagenUpgradeFragment();
-
                 /* //FÜR PRGORESSBAR BENÖTIGT
                 Bundle bundle = new Bundle();
-                bundle.putInt(ProgressBarFragment.dauerInMillisKey,1453);
+                bundle.putInt(ProgressBarFragment.dauerInMillisKey,2542);
                 test.setArguments(bundle);
                 test.setOnProgressFinishedCallable(() -> {
                     System.out.println("Progress ist fertiggestellt");
@@ -43,9 +42,14 @@ public class UpgradeDialogController{
                     public void run() {
                         // INPROGRESS Aktion
                     }
+                });
+                test.setOnCancelRunnable(new Runnable() {
+                    @Override
+                    public void run() {
+                        System.out.println("PROGRESS CANCELED");
+                    }
                 });*/
                 showFragmentAufView(R.id.constraintLayoutMain, test);
-
                 btn_close = (Button) view.findViewById(R.id.btn_close);
 
                 //btn_close.setOnClickListener(new View.OnClickListener() {
