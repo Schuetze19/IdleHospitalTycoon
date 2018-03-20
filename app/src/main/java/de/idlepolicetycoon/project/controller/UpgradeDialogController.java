@@ -1,6 +1,5 @@
 package de.idlepolicetycoon.project.controller;
 
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -16,19 +15,19 @@ import de.idlepolicetycoon.project.view.KrankenwagenUpgradeFragment;
 public class UpgradeDialogController{
 
     private Button upgradeButtonKrankenwagen;
-    private Button btn_close;
     AppCompatActivity appCompatActivity;
-    private KrankenwagenUpgradeFragment test;
+    private FragmentController fragmentController = new FragmentController();
 
     public UpgradeDialogController(View view, AppCompatActivity appCompatActivity){
         this.appCompatActivity = appCompatActivity;
+        fragmentController.setAppCompatActivity(appCompatActivity);
 
         upgradeButtonKrankenwagen = (Button) view.findViewById(R.id.upgradeButtonKrankenwagen);
 
         upgradeButtonKrankenwagen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                test = new KrankenwagenUpgradeFragment();
+                KrankenwagenUpgradeFragment test = new KrankenwagenUpgradeFragment();
                 /* //FÜR PRGORESSBAR BENÖTIGT
                 Bundle bundle = new Bundle();
                 bundle.putInt(ProgressBarFragment.dauerInMillisKey,2542);
@@ -49,8 +48,7 @@ public class UpgradeDialogController{
                         System.out.println("PROGRESS CANCELED");
                     }
                 });*/
-                showFragmentAufView(R.id.constraintLayoutMain, test);
-                btn_close = (Button) view.findViewById(R.id.btn_close);
+                fragmentController.showFragmentAufView(R.id.constraintLayoutMain, test, "krankenwagenFragment");
 
                 //btn_close.setOnClickListener(new View.OnClickListener() {
                  //   @Override
@@ -60,13 +58,5 @@ public class UpgradeDialogController{
                 //});
             }
         });
-    }
-
-    public void showFragmentAufView(int containerViewID, Fragment fragment){
-        appCompatActivity.getSupportFragmentManager().beginTransaction().replace(containerViewID, fragment).commit();
-    }
-
-    public void closeFragment(Fragment fragment){
-        appCompatActivity.getSupportFragmentManager().beginTransaction().remove(fragment).commit();
     }
 }

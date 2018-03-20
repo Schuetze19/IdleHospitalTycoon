@@ -7,11 +7,11 @@
     android:orientation="horizontal"
     tools:context="de.idlepolicetycoon.project.view.MainActivity">
 
-    <include layout="@layout/fragment_geld_uebersicht"></include>
+        <include layout="@layout/fragment_geld_uebersicht"></include>
 
-    <include layout="@layout/fragment_fahrstrecke"></include>
+        <include layout="@layout/fragment_fahrstrecke"></include>
 
-    <include layout="@layout/fragment_warteraum"></include>
+        <include layout="@layout/fragment_warteraum"></include>
 
-    <include layout="@layout/fragment_spielflaeche"></include>
+        <include layout="@layout/fragment_spielflaeche"></include>
 </android.support.constraint.ConstraintLayout>
