@@ -15,12 +15,10 @@ import de.idlepolicetycoon.project.view.KrankenwagenUpgradeFragment;
 public class UpgradeDialogController{
 
     private Button upgradeButtonKrankenwagen;
-    AppCompatActivity appCompatActivity;
+
     private FragmentController fragmentController = new FragmentController();
 
-    public UpgradeDialogController(View view, AppCompatActivity appCompatActivity){
-        this.appCompatActivity = appCompatActivity;
-        fragmentController.setAppCompatActivity(appCompatActivity);
+    public UpgradeDialogController(View view){
 
         upgradeButtonKrankenwagen = (Button) view.findViewById(R.id.upgradeButtonKrankenwagen);
 

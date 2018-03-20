@@ -10,15 +10,18 @@ import android.widget.ImageView;
 import com.example.dennis.idlepolicetycoon.R;
 import com.squareup.picasso.Picasso;
 
+import de.idlepolicetycoon.project.controller.FragmentController;
 import de.idlepolicetycoon.project.controller.UpgradeDialogController;
 
 public class MainActivity extends AppCompatActivity {
 
-    UpgradeDialogController upgradeDialogController;
+    private UpgradeDialogController upgradeDialogController;
+    private FragmentController fragmentController = new FragmentController();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        fragmentController.setAppCompatActivity(this);
         // Set fullscreen
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -26,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         final View view = this.getWindow().getDecorView();
-        upgradeDialogController = new UpgradeDialogController(view, this);
+        upgradeDialogController = new UpgradeDialogController(view);
         loadBackgroundImage(view,R.id.fahrstrecke_background,R.drawable.strassebsp);
         loadBackgroundImage(view,R.id.warteraum_background,R.drawable.warteraum);
         loadBackgroundImage(view,R.id.spielflaeche_background,R.drawable.hospital);

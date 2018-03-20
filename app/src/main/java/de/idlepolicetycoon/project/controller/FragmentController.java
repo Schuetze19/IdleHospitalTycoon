@@ -23,6 +23,14 @@ public class FragmentController {
         appCompatActivity.getSupportFragmentManager().beginTransaction().remove(fragment).commit();
     }
 
+    public Fragment findFragmentByTag(String fragmentTag){
+        return appCompatActivity.getSupportFragmentManager().findFragmentByTag(fragmentTag);
+    }
+
+    public Fragment findFragementById(int fragmentId){
+        return appCompatActivity.getSupportFragmentManager().findFragmentById(fragmentId);
+    }
+
     public AppCompatActivity getAppCompatActivity() {
         return appCompatActivity;
     }
