@@ -6,7 +6,7 @@
     tools:context="de.idlepolicetycoon.project.view.KrankenwagenUpgradeFragment">
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayoutUpgradeKrakenwagen"
+        android:id="@+id/constraintLayoutUpgradeKrankenwagen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="0dp"

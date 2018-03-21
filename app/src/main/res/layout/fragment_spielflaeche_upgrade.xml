@@ -1,0 +1,87 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="de.idlepolicetycoon.project.view.SpielflaecheUpgradeFragment">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayoutUpgradeSpielflaecheArzt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/holo_blue_light">
+
+        <ImageView
+            android:id="@+id/imageViewArzt"
+            android:layout_width="300dp"
+            android:layout_height="192dp"
+            android:layout_marginEnd="276dp"
+            android:layout_marginTop="64dp"
+            android:src="@drawable/arzt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_close_spielflaecheUpgrade"
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="5dp"
+            android:text="CLOSE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lbl_Geschwindigkeit_SpielflacheUpgradeArzt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="472dp"
+            android:layout_marginTop="268dp"
+            android:text="Geschwindigkeit:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lbl_heilung_SpielflacheUpgradeArzt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="528dp"
+            android:layout_marginTop="304dp"
+            android:text="Heilung:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewPfleger"
+            android:layout_width="300dp"
+            android:layout_height="192dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="64dp"
+            android:src="@drawable/pfleger"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lbl_Geschwindigkeit_SpielflacheUpgradePfleger"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="208dp"
+            android:layout_marginTop="268dp"
+            android:text="Geschwindigkeit:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lbl_Aufnahmegeschwindigkeit_SpielflacheUpgradePfleger"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="148dp"
+            android:layout_marginTop="304dp"
+            android:text="Aufnahmegeschwindigkeit:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

@@ -9,7 +9,7 @@ import java.util.logging.Logger;
  * Created by Dennis on 20.03.2018.
  */
 
-public class FragmentController {
+public class FragmentController{
 
     private static AppCompatActivity appCompatActivity;
 
